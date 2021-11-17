@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>让坦克开起来</title>
+		<style type="text/css">
+			input{font-size:26px;margin-top: 20px;}
+			body{background-image: url(images/grassland.png);}
+			#mytank{position: absolute;left:10px;top:100px}
+		</style>
+	</head>
+	<body>		
+		<img id="mytank" src="images/right.png"/>
+		<!-- 189000848-胡清清 -->
+		<script>
+			// 编写代码，让坦克能上下左右移动
+
+			let tank = document.addEventListener("keydown",(e)=>{
+
+			let img = document.getElementById("mytank"); //找到id为mytank
+			
+			let maxX = document.body.clientWidth; //获取body的宽度
+			let maxY = document.body.clientHeight; //获取body的宽度
+			let x = img.offsetLeft; //将img的相对容器的水平坐标赋给x
+			let y = img.offsetTop; //将img的相对容器的垂直坐标赋给y
+
+
+			switch(e.keyCode){  
+			case 87: 
+				
+				//设置边界值，若到达最上端则不可以移动
+				if(y<=0)
+				{
+					break;
+				}
+
+				//向上移动并改变坦克的方向
+				else{
+					y = y-20;
+					img.src = "images/up.png";
+					break;
+				}  
+			case 68:
+
+			//设置边界值，若到达最右端则不可以移动
+				if(x >= (maxX-70))
+				{
+					break;
+				}
+
+				//向右移动并改变坦克的方向
+				else{
+					x = x+20;
+					img.src = "images/right.png";
+					break; 
+				} 
+			case 83:
+
+			//设置边界值，若到达最下端则不可以移动
+				if(y >= (window.innerHeight-95))
+				{
+					break;
+				}
+
+				//向下移动并改变坦克的方向
+				else{
+					y = y+20;
+					img.src = "images/down.png";
+					break;
+				}  
+			case 65:
+
+			//设置边界值，若到达最左端则不可以移动
+				if(x<=0)
+				{
+					break;
+				} 
+
+				//向左移动并改变坦克的方向
+				else{
+					x = x-20;
+					img.src = "images/left.png";
+					break; 
+				} 
+			}
+
+			//移动
+			img.style.left = x+"px";
+			img.style.top = y+"px";
+		});	
+		// console.log(document.body.clientWidth);
+		// console.log(window.innerWidth);
+		// console.log(window.innerHeight);
+
+		
+		//鼠标右键在整个网页不可用
+		document.oncontextmenu= function(e){
+			e.preventDefault();
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+@charset "utf-8";
+.bannerAndFont5{
+	position: relative;
+	display: none;
+/*	background-color: aqua;*/
+	height: 343px;
+}
+.zsyz_zshd{
+	float: left;
+	width: 840px;
+	height: 310px;
+	margin: 25px 0 0 63px;
+	
+}
+.zshd{
+	float: left;
+	width: 840px;
+	border-bottom: 3px solid #cccccc;
+}
+.zshd_txt{
+	float: left;
+	font-size: 18px;
+	text-indent: 18px;
+	line-height: 2px;
+}
+.gd4{
+	float: right;
+	font-size: 14px;
+	color: #ff9900;
+	cursor: pointer;
+}
+.zsyz_zshd_txt{
+	float: left;
+	font-size: 16px;
+	line-height: 36px;
+	color: #333333;
+	margin: 23px 0 0 10px;
+}
+.zsyz_zshd_txt img{
+	margin: 0 10px 5px 0;
+}
+.zsyz_zshd_logo{
+	float: left;
+	width: 336px;
+	height: 310px;
+	margin: 32px 0 0 25px; 
+}
+.zsyz_zshd_logo span{
+	float: left;
+	width: 336px;
+	height: 62px;
+	margin-bottom: 12px;
+	cursor: pointer;
+}
+.zszc{
+	background-image: url("../images/csyz_03.png");
+}
+.rcyj{
+	background-image: url("../images/csyz_06.png");
+}
+.right_zdxm{
+	background-image: url("../images/csyz_08.png");
+}
+.zspt{
+	background-image: url("../images/csyz_10.png");
+}

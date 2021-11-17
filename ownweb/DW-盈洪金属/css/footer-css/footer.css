@@ -1,0 +1,23 @@
+@charset "utf-8";
+.footer{
+	position: relative;
+	margin-top: 25px;
+	width: 1326px;
+	height: 145px;
+	background-color: #01458e;
+}
+.footer_img{
+	position: absolute;
+	top:40px;
+	left: 386px;
+	width: 554px;
+	height: 52px;
+	background-image: url("../../images/information.png");
+}
+.footer_txt p{
+	position: absolute;
+	top:112px;
+	left: 411px;
+	font-size: 12px;
+	color: #5a8bc0;
+}

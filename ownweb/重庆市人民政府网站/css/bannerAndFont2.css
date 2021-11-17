@@ -1,0 +1,145 @@
+@charset "utf-8";
+.bannerAndFont2{
+	position: relative;
+	display: none;
+	height: 343px;
+}
+.cqfz_title{
+	float: left;
+	width: 304px;
+	height: 305px;
+	margin: 15px 0 0 63px;
+}
+.cqfz_title span{
+	float: left;
+	width: 304px;
+	height: 55px;
+	margin-bottom: 8px;
+	font-size: 22px;
+	color: #003366;
+/*	text-align: center;*/
+	line-height: 55px;
+	background-color: #E9E7E8;
+	cursor: pointer;
+}
+.tp{
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 13.5px 13px 0 85px;
+	background-image:url("../images/书 (1).png");
+}
+.tp1{
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 13.5px 13px 0 85px;
+	background-image:url("../images/国民经济学.png");
+}
+.tp2{
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 13.5px 13px 0 85px;
+	background-image:url("../images/人物关系 (1).png");
+}
+.tp3{
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 13.5px 13px 0 85px;
+	background-image:url("../images/文化旅游.png");
+}
+.tp4{
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 13.5px 13px 0 85px;
+	background-image: url("../images/生态环境 (1).png");
+}
+.cqfz_title span a{
+	text-decoration: none;
+	color: #336699;
+}
+.cqsq:hover{
+	background-image: url("../images/xhy-aa0on1.jpg");
+}
+.cqsq:hover a{
+	color: #ffffff;
+}
+.gmjj:hover{
+	background-image: url("../images/xhy-aa0on1.jpg");
+}
+.gmjj:hover a{
+	color: #ffffff;
+}
+.shfz:hover{
+	background-image: url("../images/xhy-aa0on1.jpg");
+}
+.shfz:hover a{
+	color: #ffffff;
+}
+.whly:hover{
+	background-image: url("../images/xhy-aa0on1.jpg");
+}
+.whly:hover a{
+	color: #ffffff;
+}
+.sthj:hover{
+	background-image: url("../images/xhy-aa0on1.jpg");
+}
+.sthj:hover a{
+	color: #ffffff;
+}
+.cqfz_left_txt{
+	float: left;
+	width: 878px;
+	height: 305px;
+	border: 1px solid #cccccc;
+	margin: 15px 0 0 18px;
+	background-image: url("../images/xhy-tab1bg.jpg");
+}
+
+.left_txt_txt{
+	float: left;
+	width: 550px;
+	height: 176px;
+	font-size: 14px;
+	line-height: 30px;
+	text-indent: 28px;
+	margin: 34px 0 0 17px;
+}
+.xq{
+	float: left;
+	margin: 192px 0 0 -260px;
+	font-size: 14px;
+}
+.xq a{
+	text-decoration: none;
+	color: #ff9900;
+}
+.four_title{
+	float: left;
+	width: 550px;
+	margin: 21px 0 0 17px;
+}
+.four_title span{
+	float: left;
+	width: 80px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	background-color: #336699;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+.four_title a{
+	color: #ffffff;
+}
+.cqfz_logo{
+	float: left;
+	width: 270px;
+	height: 257px;
+	margin: -180px 0 0 -21px;
+	background-image: url("../images/P020190825700946239233.jpg");
+}

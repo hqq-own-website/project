@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <!-- 189000848-胡清清 -->
+    <style>
+        *{
+            /* 鼠标样式 */
+            cursor: pointer; 
+        }
+        body{
+            /* 修改背景颜色为黑色 */
+            background-color: black;
+        }
+        img{
+            /* 绝对定位 */
+            position: absolute;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="images/player_right.gif">
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    //文档加载完成
+    $(function(){
+
+        // 全局变量 a，b
+        let a = $("img").width(); //将图片的宽度赋给a
+        let b = $("img").height(); //将图片的高度赋给b
+
+        // console.log($("img").position().top); //相对父元素位置
+        // console.log($("img").offset().left); //绝对位置
+
+
+        $(document).contextmenu(function(e){
+            e.preventDefault(); //关闭鼠标右键的默认功能
+        });
+
+        //给按下鼠标添加监听事件
+        $(document).mousedown(function(e){
+            if(e.which==3){
+                let x = e.pageX; //将鼠标点击位置的水平坐标赋给x
+                let y = e.pageY; //将鼠标点击位置的垂直坐标赋给y
+                
+
+                //给图片添加自定义动画，同时增加停止动画功能
+                $("img").stop().animate({
+                    top: y-b/2, //给top赋予鼠标垂直坐标减去图片本身高度的一半，使图片上下移动
+                    left: x-a/2 //给left赋予鼠标水平坐标减去图片本身高度的1/3，使图片左右移动
+                },
+                    2000 //在2000ms内完成动画效果
+                );
+                
+                //判断鼠标点击的位置是否在图片位置的左边，若是则变换为向左的图片
+                if((x-a/2)<$("img").offset().left){
+                    $("img").attr("src","images/player_left.gif");
+                }
+
+                //否侧换为向右的图片
+                else{
+                    $("img").attr("src","images/player_right.gif");
+                }
+            }
+        });
+       
+        //鼠标双击监听事件
+        $(document).dblclick(function(){
+            alert("恭喜您！解锁隐藏属性！");
+            $("img").attr("src","images/player2.gif"); //改变图片
+            $(document).mousedown(function(e){
+                //判断是否按下的是右键
+                if(e.which==3){ 
+
+                    let x = e.pageX; //将鼠标点击位置的水平坐标赋给x
+                    let y = e.pageY; //将鼠标点击位置的垂直坐标赋给y
+                   
+
+                    //给图片添加自定义动画，同时增加停止动画功能
+                    $("img").stop().animate({
+                        top: y-b/2, //给top赋予鼠标垂直坐标减去图片本身高度的一半，使图片上下移动
+                        left: x-a/3 //给left赋予鼠标水平坐标减去图片本身高度的1/3，使图片左右移动
+                    },
+                        2000 //在2000ms内完成动画效果
+                    );
+                
+                    //判断鼠标点击的位置是否在图片位置的左边，若是则变换为向左的图片
+                    if((x-a/3)<$("img").offset().left){
+                        $("img").attr("src","images/playerbig_left.gif");
+                    }
+
+                    //否侧换为向右的图片
+                    else{
+                        $("img").attr("src","images/playerbig_right.gif");
+                    }
+                }
+            });
+        });
+        
+    });
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- //189000848-胡清清-等边三角形 -->
+		<script>					
+			function fun1(a)
+			{
+				for (var i = 1;i <= a;i++) //定义行数 进行循环
+				{
+					for(var k = 0;k<=a-i;k++) //等边三角形的对齐，用空格代替
+					{
+						document.write("&nbsp;&nbsp;&nbsp;");//一次输出三个空格
+					}
+					for(var j = 1;j <= a;j++)//定义每行的*数量
+					{
+						
+						if(j<=i)//判断是第几行就输出多少*
+						{
+							//输出*，并用空格对齐
+							document.write("*"+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+						}
+						else
+						{
+							document.write("<br>");//换行
+							break;
+						}
+					}
+				}
+			}
+			
+			function prompt1(){
+				var number = prompt("请输入您想要的行数：","");
+				fun1(number);
+			}			
+			prompt1();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

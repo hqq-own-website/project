@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验四</title>
+</head>
+<!-- 189000848-胡清清 -->
+
+<body>
+    <script>
+        console.log("1:运行如下代码，在实验报告中写出所有变量的输出结果，同时思考最后一段代码结果的原因。")
+        let a1, b1, c1 = [1, 2, 3]; //定义了a1, b1, c1，并把数组赋给c1
+        console.log(a1, b1, c1);
+
+
+        let [a2, b2, c2] = [1, 2, 3,];//定义了a1, b1, c1，并把值分别赋给a2, b2, c2
+        console.log(a2, b2, c2);
+
+        let [a3, b3, c3] = [1, , 3,]; //定义了a3, b3, c3，并把值分别赋给a3, c3
+        console.log(a3, b3, c3);
+
+        let [a4, b4] = [1];//定义了a4, b4，并把值赋给a4
+        console.log(a4, b4);
+
+        let { y: a5, b5 } = { x: 1, y: 2 }; //将y的值付给a5
+        console.log(a5, b5);
+
+        let { a6, b6 } = 123; //找不到a6或是b6
+        console.log(a6, b6);
+
+        console.log("2. 运行如下代码，写出实验结果。");
+
+        let set = new Set();
+        set.add(1);  //增加
+        set.add(2);  //增加
+        set.add(3);  //增加
+        set.delete(2); //删除
+        let i = set.values(); //将values赋给i
+        console.log(i.next());
+        console.log(i.next());
+        console.log(i.next());
+
+        console.log("3. 运行以下代码，写出为什么最后一段代码没有输出任何结果的原因。");
+
+
+        let map = new Map();
+        map.set(1, "a");
+        map.set(2, "b");
+        map.set(3, "c");
+        map.set(4, "d");
+
+        //循环map
+        for (let i = 1; i <= map.size; i++) {
+            console.log(map.get(i));
+        }
+        map.forEach(function (value, key) {
+            console.log(value);
+        });
+
+        for (let v of map.values()) {
+            console.log(v);
+        }
+        for (var prop in map) {
+            console.log(prop);
+        }
+
+
+        console.log("4. 运行如下代码，在实验报告中写运行结果，并简要阐述原因。");
+
+        let arr1 = [1, 2, 3]; //定义数组
+
+        let arr2 = arr1;
+        console.log(arr1 == arr2);
+
+        let arr3 = [...arr1]; //将数组用逗号分隔为字符串
+        console.log(arr1 == arr3);
+
+
+        console.log(" 5. 用箭头函数改写如下代码，在实验报告中写出改写后的代码。");
+
+        let arr4 = [1, 2, 3];
+        arr4.forEach(function (v, k) {
+            console.log(v);
+        })
+
+
+        console.log("改用箭头函数：");
+
+        //参数（v,k）函数体 console.log(v);
+        arr4.forEach((v, k) => {
+            console.log(v);
+        });
+
+
+        console.log(" 6. 运行如下代码，在实验报告中写出这两句代码的作用。");
+
+        Array.of(1, 2, 3).filter(i => i > 1).forEach(i => console.log(i));
+        console.log("作用：将(1, 2, 3)转为数组，若i>1，循环输出i");
+
+        let fib = n => n > 1 ? fib(n - 1) + fib(n - 2) : n;
+        console.log("作用：定义函数fib，若n>1，执行fib(n - 1) + fib(n - 2)，否则输出n");
+
+        console.log(" 7. 使用 class 和 extends 实现如下关系，测试并将代码填写在实验报告中。");
+
+        console.log("class的语法：");
+
+        //定义父类Animial
+        class Animial {
+            constructor(name) {
+                this.name = name;
+            }
+            shount() {
+                console.log("大声叫");
+            }
+        }
+
+        //定义子类Dog 继承父类Animial
+        class Dog extends Animial {
+            constructor(name, age) {
+                super(name);  // super就代表 父类的构造函数
+                this.age = age;
+            }
+            eat() {
+                console.log("一直吃");
+            }
+        }
+
+        let a = new Dog("小一", 12);
+        console.log(a);
+    </script>
+</body>
+
+</html>

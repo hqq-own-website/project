@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inherit(继承)</title>
+</head>
+
+<body>
+    <script>
+        // 方式一：借用构造函数（经典继承）
+
+
+        // 创建一个动物(姓名，性别)对象
+        function animal(name, sex) {
+            this.name = name;
+            this.sex = sex;
+        }
+
+        //创建一个猫的对象inherit(继承)animal(动物对象)
+        function cat(name, sex, color) {
+            animal.call(this, name, sex);
+            this.color = color;
+        }
+
+        var anm = new cat("小红", "雌性（tabby）", "红色（red）");//赋予属性
+
+        console.log("名字：" + anm.name + "" + "性别：" + anm.sex + " " + "颜色：" + anm.color);//打印
+    </script>
+
+
+    <script>
+        // 方式二：组合继承（伪经典继承）  利用原型链实现对原型对象属性和方法的继承
+        //  借用构造函数实现实例对象属性和方法的继承
+
+
+        // 创建一个动物(姓名，性别)对象
+        function animal(name, sex) {
+            this.name = name;
+            this.sex = sex;
+        }
+
+        animal.prototype.run = function () {
+            console.log("跑");
+        }
+
+        //创建一个猫的对象inherit(继承)animal(动物对象)
+        function cat(name, sex, color) {
+            animal.call(this, name, sex);
+            this.color = color;
+        }
+
+        cat.prototype = new animal();
+        var anm = new cat("小红", "雌性（tabby）", "红色（red）");//赋予属性
+
+        console.log("名字：" + anm.name + "" + "性别：" + anm.sex + " " + "颜色：" + anm.color + "准备" + anm.run);//打印
+    </script>
+
+
+    <script>
+        // 方式三：原型式继承
+        //  使用Object.create()，获得某对象的原型
+
+        var animal = {
+            name: "小红",
+            sex: "tobby",
+            run: function () {
+                console.log("跑");
+            }
+        }
+
+        var cat = Object.create(animal);
+
+        console.log("名字：" + cat.name + "" + "性别：" + cat.sex + " " + "准备" + cat.run);
+    </script>
+
+
+    <script>
+        //    方式四：寄生式继承
+        //  利用一个工厂函数改造一个对象的属性和方法，从而获得新对象
+
+
+        // 新增方法
+        function creatNewAnimal(animal) {
+            var temp = new Object(animal);
+            temp.jump = function () {
+                console.log("跳");
+            }
+            return temp;
+        }
+
+        var animal = {
+            name: "小红",
+            sex: "tobby",
+            run: function () {
+                console.log("跑");
+            }
+        }
+        var cat = creatNewAnimal(animal);
+
+        console.log("名字：" + cat.name + "" + "性别：" + cat.sex + " " + "准备" + anm.run + "和" + cat.jump);//打印
+    </script>
+
+
+    <script>
+        //    方式五：寄生组合式继承
+
+        // 新增方法
+        function inheritPrototype(sFun, PFun) {
+            var myPrototype = new Object(PFun.prototype);
+            myPrototype.constructor = sFun;
+            sFun.prototype = myPrototype;
+        }
+
+
+        function animal(name, sex) {
+            this.name = name;
+            this.sex = sex;
+        }
+
+        animal.prototype.run = function () {
+            console.log("跑");
+        }
+
+        function cat(name, sex, color) {
+            animal.call(this, name, sex);
+            this.color = color;
+        }
+
+        inheritPrototype(cat, animal);
+        var anm = new cat("小红", "雌性（tabby）", "红色（red）");
+        console.log("名字：" + anm.name + "" + "性别：" + anm.sex + " " + "颜色：" + anm.color + "准备" + anm.run);//打印
+    </script>
+</body>
+
+</html>

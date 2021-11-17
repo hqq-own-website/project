@@ -1,0 +1,143 @@
+@charset "utf-8";
+.bannerAndFont3{
+	position: relative;
+	display: none;
+/*	background-color: aqua;*/
+	height: 343px;
+}
+.xxgk{
+	float: left;
+	width: 142px;
+	height: 309px;
+	margin: 15px 0 0 63px;
+	border: 2px solid #cccccc;
+	background-image: url("../images/zfwj_03.jpg");
+}
+.xxgk_tp{
+	float: left;
+	width: 52px;
+	height: 52px;
+	border-radius: 20px;
+	background-color: #336699;
+	margin: 56px 0 0 45px;
+}
+.xxgk_tp_tp{
+	float: left;
+	width: 24px;
+	height: 29px;
+	background-image: url("../images/sq_tp_03.png");
+	margin: 11.5px 0 0 14px;
+}
+.xxgk_txt{
+	float: left;
+	font-size: 26px;
+	color: #336699;
+/*	font-weight: 600;*/
+	margin:17px 0 0 47px;
+}
+.wjjd{
+	float: left;
+	width: 665px;
+	height: 245px;
+	margin: 15px 0 0 30px;
+}
+.zfwz{
+	float: left;
+	width: 665px;
+	height: 43px;
+	margin-top:-15px;
+	border-bottom: 3px solid #cccccc;
+}
+.zfwz span{
+	float: left;
+	width: 120px;
+	height: 43px;
+	font-size: 18px;
+	line-height: 43px;
+	margin-left: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.szfwj:hover{
+	font-weight: 700;
+	border-bottom:3px solid#336699;
+}
+.zcjd:hover{
+	font-weight: 700;
+	border-bottom:3px solid#336699;
+}
+.zfgb:hover{
+	font-weight: 700;
+	border-bottom:3px solid#336699;
+}
+.zfjd_txt{
+	float: left;
+	width: 665px;
+	height: 200px;
+	font-size: 16px;
+	line-height: 36px;
+	margin: 10px 0 0 0;
+}
+.zfjd_txt img{
+	margin: 0 10px 0 0;
+}
+.db_title{
+	float: left;
+	width: 665px;
+	height: 45px;
+	color: #336699;
+	margin: 18px 0 0 -15px;
+}
+.db_title span{
+	float: left;
+	width: 200px;
+	height: 45px;
+	border: 1px solid #336699;
+	text-align: center;
+	line-height: 45px;
+	font-size: 16px;
+	border-radius: 10px;
+	margin: 0 0 0 12px;
+	cursor: pointer;
+}
+.zwgk_logo{
+	float: left;
+	width: 338px;
+	height: 310px;
+	margin: 15px 0 0 22px;
+}
+.zwgk_logo div{
+	cursor: pointer;
+}
+.gkzn{
+	float: left;
+	width: 338px;
+	height: 70px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background-image: url("../images/zwgk_logo_03.png");
+}
+.gkzd{
+	float: left;
+	width: 338px;
+	height: 70px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background-image: url("../images/zwgk_logo_06.png");
+}
+.gknr{
+	float: left;
+	width: 338px;
+	height: 70px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background-image: url("../images/zwgk_logo_08.png");
+}
+.gknb{
+	float: left;
+	width: 338px;
+	height: 70px;
+	border-radius: 5px;
+/*	margin-bottom: 10px;*/
+	background-image: url("../images/zwgk_logo_10.png");
+}

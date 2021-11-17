@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数应用</title>
+</head>
+<body>
+    <!-- 189000848-胡清清 -->
+    <script>
+        //1:
+        console.log("实验流程1：");
+        function getSum(num1,num2){
+            var sum = num1 + num2;
+            console.log(num1+"+"+num2+"="+(num1+num2));
+        }   
+        getSum(11,12);
+
+        //2:
+        console.log("实验流程2：");
+        // getProduct(2,4);
+
+        // var getProduct = function (num1,num2){
+        //     console.log(num1+"+"+num2+"="+(num1+num2));
+        // }   
+        //错误原因：该函数为变量式，函数不能在它之前调用
+
+        //代码修改如下：
+        var getProduct = function (num1,num2){
+            console.log(num1+"+"+num2+"="+(num1+num2));
+        }   
+        getProduct(2,4);
+
+    var getProduct = (num1, num2) => {
+        console.log(num1 + "+" + num2 + "=" + (num1 + num2));
+    }
+    getProduct(2, 4);
+        //或者：
+        // getSum(2,4);
+
+        // function getProduct(num1,num2){
+        //     console.log(num1+"+"+num2+"="+(num1+num2));
+        // }
+        
+        
+    //3:
+        console.log("实验流程3：");
+        var a = 100;
+        
+        function test(){
+            console.log(a);
+            a = 10;
+            console.log(a);
+        }
+        test();
+        console.log(a);
+
+
+    //4:
+        console.log("实验流程4：");
+        var a = 10;
+        fun1();
+        function fun1(){
+            var b = 20;
+            console.log(a);
+            console.log(b);
+            var a = 30;
+        }
+
+    //5:
+     console.log("实验流程5：");
+        function fun2(a,b){
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+        }
+        fun2(1,2,3);
+
+    //6:
+     console.log("实验流程6：");   
+
+        function fun2(a,b){
+           var x = [0,1,2];
+           for (y in x )
+           {
+               console.log(arguments[y]);
+           }
+        }
+        fun2(1,2,3); 
+    </script>
+    
+    <script>
+        //7:
+        "use strict";
+        console.log("实验流程7：");   
+        num = 100;      
+    </script>
+
+    <script>
+        //8和9:
+        "use strict";
+        console.log("实验流程8和9：");
+        function getSum(num1,num2){
+            sum = num1 + num2;
+            console.log(num1+"+"+num2+"="+(num1+num2));
+        }
+        try{
+            getSum(11,12);
+        }
+        catch(err){
+            alert("sum未定义类型！");
+        }
+    </script>
+    <!-- <script>
+        "use strict";
+        try{
+             a = 10;
+        }
+        catch(aa){
+            alert("进制问题");
+        } -->
+    </script>
+</body>
+</html>

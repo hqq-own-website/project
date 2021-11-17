@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>菱形</title>
+		<!-- 189000848-胡清清-菱形 -->
+	<script>
+			function fun1(a)
+			{
+				for (var i = 1; i <= a; i++) {
+					for (var j = 0; j <= a - i; j++) { //每行输出的的空格数
+						document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+				    }
+					for (var k = 0; k < 2 * i - 1; k++) { //每行输出的的*号
+						document.write("*" + "&nbsp;&nbsp;&nbsp;");
+					}
+					document.write("<br>");//换行
+					document.write("<br>");//换行
+				}
+				//Math.ceil() 向上取整  Math.round()四舍五入  Math.floor()向下取整
+				// var o = a-1;
+				for (var i = a - 1; i > 0; i--) {
+					for (var j = 0; j <= a - i; j++) {
+						document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+				    }
+					for (var k = 0; k < 2 * i - 1; k++) {
+						document.write("*" + "&nbsp;&nbsp;&nbsp;");
+					}
+				    document.write("<br>");//换行
+					document.write("<br>");//换行
+				}
+			}
+				// 	function prompt1() {
+				// 		var number = prompt("请输入您想要的行数：", "");
+				// 		// var numberTure = Math.floor(number/2);
+				// 		fun1(number);
+				//   }	
+
+				var prompt1 = () => {
+					var number = prompt("请输入您想要的行数：", "");
+					// var numberTure = Math.floor(number/2);
+					fun1(number);
+				}
+				prompt1();
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

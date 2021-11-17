@@ -1,0 +1,31 @@
+@charset "utf-8";
+.bannerAndFont6{
+	position: relative;
+	display: none;
+/*	background-color: aqua;*/
+	height: 343px;
+}
+.ydsj{
+	background-image: url("../images/cqsj_03.png");
+}
+.jdsj{
+	background-image: url("../images/cqsj_06.png");
+}
+.ndsj{
+	background-image: url("../images/cqsj_08.png");
+}
+.sjcx{
+	background-image: url("../images/cqsj_03.jpg");
+}
+.ydsj:hover{
+	background-image: url("../images/cqsj_15.jpg");
+}
+.jdsj:hover{
+	background-image: url("../images/cqsj_12.jpg");
+}
+.ndsj:hover{
+	background-image: url("../images/cqsj_10.jpg");
+}
+.sjcx:hover{
+	background-image: url("../images/cqsj_10.png");
+}

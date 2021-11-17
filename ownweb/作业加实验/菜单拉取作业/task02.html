@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/menu1.css" />
+	<title>练习02 实现菜单的收缩与扩展</title>
+</head>
+
+<body>
+	<div id="leftNav" class="left-nav">
+		<div id="myMenu" class="menuBox">
+			<ul class="spMenuBox">
+				<li class="spMenuItem active">
+					<div class="spMenu" onclick="onclick1(0)">
+						<i class="fa fa-folder-open"></i>
+						<span>菜单1</span>
+						<i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					<ul class="subMenuBox" style="display: block;">
+						<li><span class="subMenu">菜单1.1</span></li>
+						<li><span class="subMenu">菜单1.2</span></li>
+						<li><span class="subMenu">菜单1.3</span></li>
+					</ul>
+				</li>
+				<li class="spMenuItem">
+					<div class="spMenu" onclick="onclick1(1)">
+						<i class="fa fa-folder"></i>
+						<span>菜单2</span>
+						<i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					<ul class="subMenuBox" style="display: none;">
+						<li><span class="subMenu">菜单2.1</span></li>
+						<li><span class="subMenu">菜单2.2</span></li>
+						<li><span class="subMenu">菜单2.3</span></li>
+						<li><span class="subMenu">菜单2.1</span></li>
+						<li><span class="subMenu">菜单2.2</span></li>
+						<li><span class="subMenu">菜单2.3</span></li>
+					</ul>
+				</li>
+				<li class="spMenuItem">
+					<div class="spMenu" onclick="onclick1(2)">
+						<i class="fa fa-folder"></i>
+						<span>菜单3</span>
+						<i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					<ul class="subMenuBox" style="display: none;">
+						<li><span class="subMenu">菜单3.1</span></li>
+						<li><span class="subMenu">菜单3.2</span></li>
+						<li><span class="subMenu">菜单3.3</span></li>
+						<li><span class="subMenu">菜单3.1</span></li>
+						<li><span class="subMenu">菜单3.2</span></li>
+						<li><span class="subMenu">菜单3.3</span></li>
+						<li><span class="subMenu">菜单3.1</span></li>
+						<li><span class="subMenu">菜单3.2</span></li>
+						<li><span class="subMenu">菜单3.3</span></li>
+					</ul>
+				</li>
+				<li class="spMenuItem">
+					<div class="spMenu" onclick="onclick1(3)">
+						<i class="fa fa-folder"></i>
+						<span>菜单4</span>
+						<i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					<ul class="subMenuBox" style="display: none;">
+						<li><span class="subMenu">菜单4.1</span></li>
+						<li><span class="subMenu">菜单4.2</span></li>
+						<li><span class="subMenu">菜单4.3</span></li>
+					</ul>
+				</li>
+				<li class="spMenuItem">
+					<div class="spMenu" onclick="onclick1(4)">
+						<i class="fa fa-folder"></i>
+						<span>菜单5</span>
+						<i class="fa fa-2x fa-angle-down"></i>
+					</div>
+					<ul class="subMenuBox" style="display: none;">
+						<li><span class="subMenu">菜单5.1</span></li>
+						<li><span class="subMenu">菜单5.2</span></li>
+						<li><span class="subMenu">菜单5.3</span></li>
+						<li><span class="subMenu">菜单5.1</span></li>
+						<li><span class="subMenu">菜单5.2</span></li>
+						<li><span class="subMenu">菜单5.3</span></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+<script>
+	// 胡清清-189000848
+	function onclick1(i) {
+		let subMenuBox = document.querySelectorAll(".spMenuBox ul"); //获得subMenuBox下的所有ul
+		let spMenuItem = document.querySelectorAll(".spMenuItem");//获取所有的spMenuItem
+		let spMenu = document.querySelectorAll(".spMenu");//获取所有的spMenu
+
+		//判断二级菜单是否是显示的
+		if (subMenuBox[i].style.display == "block") {
+			subMenuBox[i].style.display = "none"; //隐藏二级菜单
+			spMenuItem[i].className = "spMenuItem"; //修改ul下的第一个li标签的className
+			spMenu[i].childNodes[1].className = "fa fa-folder"; //获取spMenu下的第一个子标签并修改它的className
+		}
+		else {
+			subMenuBox[i].style.display = "block";//显示二级菜单
+			spMenuItem[i].className = "spMenuItem active";//修改ul下的第一个li标签的className
+			spMenu[i].childNodes[1].className = "fa fa-folder-open";//获取spMenu下的第一个子标签并修改它的className
+
+
+			for(let a of subMenuBox)//循环subMenuBox，找到与当前点击的索引值不等的值
+			{
+				if(a!=subMenuBox[i])
+				{
+					a.style.display="none"; //隐藏与当前不匹配的二级菜单
+				}
+ 		 	 }
+			for(let b of spMenuItem)//循环spMenuItem，找到与当前不配的值
+			{
+				if(b!=spMenuItem[i])
+				{
+					b.className = "spMenuItem"; //修改ul下的第一个li标签的className，改变箭头
+				} 			
+			}
+				
+			for(let c of spMenu)//循环spMenu，找到与当前不配的值
+			{
+				if(c.childNodes[1]!=spMenu[i].childNodes[1])
+				{
+					c.childNodes[1].className = "fa fa-folder"//获取spMenu下的第一个子标签并修改它的className，改变图标
+				}
+			}
+		} 
+ 	}
+</script>
+</html>

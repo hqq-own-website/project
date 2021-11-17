@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>打印图形</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--End-->
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto;
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+    </script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+    <header class="site-header container animated fadeInDown">
+        <div class="header-wrapper"></div>
+        <div>
+            <h4><a href="https://gitee.com/hu-qingqing-189000848/hu-qingqing-189000848">我的仓库</a></h4>
+        </div>
+    </header>
+    <div id="menu-container">
+        <div id="menu-1" class="homepage home-section container">
+            <div class="home-intro text-center">
+                <h2 class="welcome-title animated fadeInLeft">姓名：胡清清</h2>
+                <p class="animated fadeInRight">学号：189000848</p>
+            </div>
+            <div style="border-bottom: 2px solid #46494f;"></div>
+            <br /><br />
+            <div class="projects-holder">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 p-1 animated umScaleIn">
+                        <a href="作业加实验/打印图形作业/三角形.html" class="work-link">打印三角形</a>
+                        <div class="project-item">
+                            <img src="images/personHome.jpg" alt="">
+                            <div class="overlay">
+                                <h4><img src="images/personHome.jpg" alt=""></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1 animated umScaleIn">
+                        <a href="作业加实验/打印图形作业/平行四边形.html" class="work-link">打印平行四边形</a>
+                        <div class="project-item">
+                            <img src="images/personHome.jpg" alt="">
+                            <div class="overlay">
+                                <h4><img src="images/personHome.jpg" alt=""></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1 animated umScaleIn">
+                        <a href="作业加实验/打印图形作业/菱形.html" class="work-link">打印菱形</a>
+                        <div class="project-item">
+                            <img src="images/personHome.jpg" alt="">
+                            <div class="overlay">
+                                <h4><img src="images/personHome.jpg" alt=""></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-4 col-sm-6 p-2 animated umScaleIn">
+                        <a href="#" class="work-link">第一次作业</a>
+                        <div class="project-item">
+                            <img src="picture/1.jpg" alt="">
+                            <div class="overlay">
+                                <h4><img src="picture/2.jpg" alt=""></h4>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <span class="border-top"></span>
+    <span class="border-left"></span>
+    <span class="border-right"></span>
+    <span class="border-bottom"></span>
+    <!-- 网易云音乐 -->
+    <!-- <embed frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0
+        src="//music.163.com/outchain/player?type=0&id=4950890732&auto=1&height=0"></embed> -->
+    <!--鼠标点击效果-->
+    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+</body>
+
+</html>

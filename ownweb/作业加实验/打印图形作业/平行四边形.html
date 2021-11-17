@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>平行四边形</title>
+		<!-- 189000848-胡清清-平行四边形 -->
+	</head>
+	<script>
+		function fun1(a){
+			for (var i = 1;i <= a;i++) //定义行数 进行循环
+			{
+				// var l = 0; //申明一个不变的常量
+				for(k = 0;k<=a-i;k++) //用以对齐，空格代替
+				{
+					document.write("&nbsp;&nbsp;&nbsp;");//一次输出三个空格
+				}
+				for(j = a;j >=0;j--)//定义每行的*数量
+				{
+					
+					if(j>0)//不换行的条件
+					{
+						//输出*，并用空格对齐
+						document.write("*"+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+					}
+					else
+					{
+						document.write("<br>");//换行
+						break;
+					}
+				}
+			}
+		}
+		function prompt1(){
+			var number = prompt("请输入您想要的行数：","");
+			fun1(number);
+		}			
+		prompt1();
+	</script>
+	<body>
+	</body>
+</html>

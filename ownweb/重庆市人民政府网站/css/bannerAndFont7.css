@@ -1,0 +1,142 @@
+@charset "utf-8";
+.bannerAndFont7{
+	position: relative;
+	display: none;
+/*	background-color: aqua;*/
+	height: 343px;
+}
+.hdjl{
+	float: left;
+	width: 852px;
+	height: 330px;
+	margin: 10px 0 0 63px;
+}
+.hdjl_txt{
+	float: left;
+	width: 712px;
+/*
+	font-size: 18px;
+	text-indent: 18px;
+	line-height: 20px;
+*/
+	border-bottom: 3px solid #cccccc;
+}
+.hdjl_txt_txt{
+	float: left;
+	font-size: 18px;
+	text-indent: 18px;
+	line-height: 36px;
+}
+.hdjl_wyxx{
+	float: left;
+	width: 131px;
+	height: 46px;
+	margin: 5px 0 0 8px;
+	cursor: pointer;
+	background-image: url("../images/index42.jpg");
+}
+.ul_1{
+	float: left;
+	font-size: 16px;
+	line-height: 36px;
+	margin: 12px 0 0 0;
+}
+.ul_1 img{
+	margin: 0 10px 5px 0;
+}
+.ul_2{
+	float: left;
+	font-size: 16px;
+	line-height: 36px;
+	margin: 12px 0 0 190px;
+}
+.ul_2 img{
+	margin: 0 10px 5px 0;
+}
+.xjcx{
+	float: left;
+	width: 850px;
+	height: 82px;
+	background-color: #F8F6F7;
+	margin-top: 5px;
+}
+.xjcx_title{
+	float: left;
+	margin: 20px 0 0 15px;
+	line-height: 24px;
+	border-bottom: 2px solid #336699;
+}
+.xjcx_zw{
+	font-size: 18px;
+	color: #0099ff;
+	font-weight: 700;
+}
+.xjcx_py{
+	font-size: 14px;
+	color: #336699;
+}
+
+.xjcx_srk{
+	float: left;
+	height: 22px;
+	width: 470px;
+	margin: 22px 0 0 25px;
+}
+.cxm{
+	float: left;
+	font-size: 14px;
+	color: #336699;
+}
+.sjh{
+	float: left;
+	font-size: 14px;
+	color: #336699;
+	margin-left: 5px;
+}
+.xjcx_srk input{
+/*	float: left;*/
+	width: 158px;
+	height: 22px;
+	border-radius: 4px;
+	border: 1px solid #cccccc;
+	margin-left: 5px; 
+	outline: none;
+}
+.xjcx_js{
+	float: left;
+	font-size: 12px;
+	margin: 10px 0 0 22px;
+}
+.xjcx_cx{
+	float: right;
+	width: 129px;
+	height: 36px;
+	margin: -55px 20px 0 0;
+	cursor: pointer;
+	background-image: url("../images/index44.jpg");
+}
+.xjcx_logo{
+	float: left;
+	width: 336px;
+	height: 310px;
+	margin: 28px 0 0 14px; 
+}
+.xjcx_logo span{
+	float: left;
+	width: 336px;
+	height: 70px;
+	margin-bottom: 12px;
+	cursor: pointer;
+}
+.gkxx{
+	background-image: url("../images/xhy-ga0.jpg");
+}
+.xwfb{
+	background-image: url("../images/xhy-ga1.jpg");
+}
+.zxft{
+	background-image: url("../images/xhy-ga2.jpg");
+}
+.yjzj{
+	background-image: url("../images/xhy-ga3.jpg");
+}

@@ -1,0 +1,139 @@
+@charset "utf-8";
+.center-part2{
+	float: left;
+	width: 1200px;
+	margin: 18px 0 0 63px;
+}
+.ttxx{
+	float: left;
+	width: 366px;
+	height: 123px;
+	margin-right: 21px;
+	background-image: url("../images/P020190822324171481139.jpg");
+}
+.zfgw{
+	float: left;
+	width: 257px;
+	height:  123px;
+	margin-right: 21px;
+	background-image:url("../images/P020191226362128396379.jpg");
+}
+.fgf{
+	float: left;
+	width: 257px;
+	height:  123px;
+	margin-right: 21px;
+	background-image:url("../images/P020190826486029912158.jpg");
+}
+.jyta{
+	float: left;
+	width: 257px;
+	height:  123px;
+	background-image:url("../images/P020190903404213929709.jpg");
+}
+.zsyz{
+	float: left;
+	width:842px;
+	height: 331px;
+	border: 1px solid #cccccc;
+	margin: 15px 0 0 0;
+}
+.zsyz_t{
+	float: left;
+	width: 842px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 55px;
+	border-bottom-color: #cccccc;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+}
+.zsyz_txt{
+	float: left;
+	width: 410px;
+	height: 281px;
+	margin-right: 22px;
+}
+
+.lt1{
+	float: left;
+	width: 5px;
+	height: 18px;
+	margin: 22px 0 0 15px;
+	background-color: #336699;
+}
+.txt_r_title1{
+	float: left;
+	margin: 20px 0 0 8px;
+	font-size: 16px;
+	color:  #336699;
+}
+.gd1{
+	float: right;
+	font-size: 14px;
+	margin: 22px 65px 0 0;
+}
+.gd1 a{
+	color: #ff9900;
+}
+
+.gzdt_txt1{
+	float: left;
+	width: 410px;
+	height: 200px;
+	font-size: 14px;
+	color: #333333;
+/*	文字间距*/
+	line-height: 36px;
+/*	letter-spacing: 1px;*/
+	margin: 5px 0 0 0;
+}
+.s{
+	text-indent: 30px;
+}
+.gzdt_txt1 img{
+	margin: 15px 10px 5px 15px;
+}
+.zdxm{
+	float: left;
+	width: 410px;
+	height: 281px;
+}
+.szxx{
+	float: right;
+	width: 337px;
+	height: 331px;
+	border: 1px solid #cccccc;
+	margin: 15px 0 0 0;
+}
+.szxx_t{
+	float: left;
+	width: 337px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 55px;
+	border-bottom-color: #cccccc;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+}
+.szxx_txt{
+	float: left;
+	width: 337px;
+	height: 150px;
+	font-size: 14px;
+	color: #333333;
+/*	文字间距*/
+	line-height: 36px;
+/*	letter-spacing: 1px;*/
+	margin: 10px 0 0 10px;
+}
+.szxx_txt img{
+	margin: 10px 10px 0 5px;
+}
+.wyxx{
+	float: left;
+	width: 310px;
+	height: 64px;
+	margin: 40px 0 0 13px;
+	background-image: url("../images/index7.jpg");
+}

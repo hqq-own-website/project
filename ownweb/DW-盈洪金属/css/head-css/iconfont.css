@@ -1,0 +1,38 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1617072825624'); /* IE9 */
+  src: url('iconfont.eot?t=1617072825624#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPEAAsAAAAACAgAAAN4AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDSIMPATYCJAMQCwoABCAFhG0HQhv7BhEVnMXIPk5XxH9zVUYq/h0EqNNOlpKqSoEcPxCA80g8AU4lmp5h8uZmv1SNilAsyXnwv3xHuiFcCD8MuJz+FP+vzt5yGXPZnLowwDiggPbGaAsXUM4NYzcRNMTzEIChEBUQLVp16IFGAaYJQEwYO3ooOuNENdQKNAJ/xVpVRGzCh7ZWWy+Bjfz74iPVhAYLnwTM7TKq5QiavIn55kjXcxlACVTT+QFjE0igAqBAjKkMDkNG6QpIjPcbRS1Ao7HgTcz7w98cz5PVRzFqGAJr8J8n/IDqCABqyAZ5YSoswIL3hwVI+OaoH+ASBYAG/MAK4K7CFlBe8DOLFVNRESXmW7tOlTBrdggR2mHMmm3gbjPmxJl8MuSM3rnWHrm9dy9ZPqnXmTVlRmzbZXfdftw86KTTfeee6SN7jOqRnNwrJaV3UlLPRKAfhHVJsjy3f3Jy/x2Os9MZ3n/nTjuw1u47dLttb0/o0VfhErYFhw1ZGNzh9G8oogvLM1XemSyTK5k38b7vqpyRhQMrZtccETOCFK04MfHEartMP0VdvPnKluvNrv8/dMSNrti76MzkpfUy1T6zaGaPOI7X7dtn8JC+fe9MPqmys+RJaM/OVt4ns7LVSTrV2zh58sZ6ndZ2ZlGPBlsKbp88ZUfBLQ16LKaTNXHzJoq9vd24/KDvNfPMKlj6iRsRO2h2wWSP753qd7rz/mnripWepTxJCTsYfpj22/mscstKTAE8cNkjFZJNwHOVkC54j+V7OepfjuP00ejXg6Mb/NaBZ4llrrp6m8uHkW7IhR+i6qz6c37lesCrQr5GTikFNCi5unsVihbI260HgwE8ORpH9hRm26sGgcZOYBFGQUg0JUjFVoCPADXgR9MYhvK03hwgnmlIhAoHyrFcgiCGi7CI4iEkMbwiFZsFH0E+w0+MkFAYeon4PQOUEkk1Z9SCDswfkqXVI48oUXvHcFTNaQ3n3sh7ikHfdPncjCvyFAv2TxhEPHimBSbpMqyVYGPKaKWJItvYtr7qRo2l5aRoDoNoBMQBGP4ACQux4mlnQRU+fwcJHFQ03NDSk36DMDupd6CnoetAzsa1U8utXLPzITAgCB7AwxALwCT5kQrTBLBVj8ogFqEhDkhujLRKO9/V2CxvXt5wF2AAeythCSmU8KHG0IJqlF6D0znR0tt00Xw6AQ==') format('woff2'),
+  url('iconfont.woff?t=1617072825624') format('woff'),
+  url('iconfont.ttf?t=1617072825624') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1617072825624#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  color: #1296db;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  float: left;
+  margin-top: 2px;
+  margin-left: 86%;
+  content: "\f017";
+}
+
+.icon-fangdajing:before {
+	float: right;
+	margin-top: 2px;
+    content: "\e610";
+}
+
+.icon-star:before {
+  float: left;
+  margin-left: 26px;
+  margin-top: 2px;
+  content: "\e9a1";
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验2-引用类型</title>
+</head>
+<body>
+    <!-- 189000848-胡清清 -->
+    <script>
+        console.log("实验流程1：JavaScript 提供了一些内置函数，用以实现对数据类型的转换、判断等效 果，请运行如下代码，记录其结果，并思考原因。");
+
+        //Number()内置函数：
+        console.log("(1):Number()");
+
+        console.log(Number(true),Number(null),+undefined);
+        //原因：Number() 函数把对象的值转换为数字。如果对象的值无法转换为数字，那么 Number() 函数返回 NaN。
+
+
+
+        //Boolean()内置函数：
+        console.log("(2):Boolean()")
+
+        console.log(Boolean('100'),Boolean(100),Boolean(null),!!undefined);
+        //原因：Boolean 对象用于转换一个不是 Boolean 类型的值转换为 Boolean 类型值 (true 或者false).
+
+
+
+        //parselnt()内置函数：
+        console.log("(3):parselnt()");
+
+        console.log(parseInt(123.6),parseInt(0b1011011),parseInt(0X2A),parseInt(0X2A,8));
+        //原因：parseInt() 函数可解析一个字符串，并返回一个整数。如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
+
+
+
+        //eavl()内置函数：
+        console.log("(4):eavl()")
+
+        console.log(eval('87*99+2'));
+        //原因：eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码。
+
+
+
+        //isNaN()内置函数：
+        console.log("(5):isNaN()");
+
+        console.log(isNaN(null),isNaN('123'),isNaN('abc'),isNaN('a1b2c3'));
+        //原因：isNaN() 函数用于检查其参数是否是非数字值。如果参数值为 NaN 或字符串、对象、undefined等非数字值则返回 true, 否则返回 false。
+
+
+
+        console.log("实验流程2：Array 在 JavaScript 中表示数组，可以使用字面量和构造函数两种方式创 建。");
+
+
+        console.log("(1):");
+
+        var arr1 = []; //定义一个名为arr1的数组；
+        console.log(arr1,arr1.length); //打印数组arr1和数组arr1的长度
+        
+
+        var arr2 = [1,2,3]; //定义一个名为arr2的数组，并赋值；
+        console.log(arr2[0],arr2.length); //打印数组索引为0的值，和数组arr2数组的长度
+
+
+        var arr3 = new Array(); //创建一个名为arr3的数组对象；
+        console.log(arr3[1],arr3.length); //打印数组对象索引为1的值，和数组对象的长度
+
+
+        console.log("(2):去掉arr2的的第一个元素");
+
+
+        var arr2 = [1,2,3]; //定义一个名为arr2的数组，并赋值；
+        arr2.shift(); //删除并返回数组的第一个元素。
+        console.log(arr2); //打印数组
+
+
+        var arr2 = [1,2,3] //定义一个名为arr2的数组，并赋值；
+
+        arr2.splice(0,1); //从数组中添加或删除元素。（从什么位置开始，删除几个）  注意：如果仅删除一个元素，
+        //则返回一个元素的数组。如果未删除任何元素，则返回空数组。会改变原始数组；
+
+        console.log(arr2); //打印数组
+
+
+        console.log("3:打印出现在是几时几分：");
+
+        var d=new Date(); //创建一个时间对象
+        var n=d.toLocaleTimeString(); //根据本地时间把 Date 对象的时间部分转换为字符串：
+        console.log(n); //打印出现在的时间
+
+
+        console.log("4:RegExp 在 JavaScript 中表示正则表达式");
+
+        console.log("(1):");
+
+        var reg1 = /^\d{4}$/; ///^(\d{4})中^是开始，(\d{4})是匹配4个数字。
+        console.log(
+            reg1.test('1234'),
+            reg1.test('1a34'),
+            reg1.test('12345')
+        );
+
+
+        console.log("(2)");
+
+        var reg2 = new RegExp( "^[sp]\\d{1,4}$", "i");
+        console.log(
+            reg2.test('p123'),
+            reg2.test('1234'),
+            reg2.test('S10')
+        );
+
+
+
+        console.log("(3)");
+
+
+        function check(a){
+            var regex = new RegExp( "189|180|153|133", "i"); //定义正则表达式的规则
+
+            if(regex.test(a)==true)
+            {
+                console.log("该号码是中国电信");
+            }
+            else
+            {
+                console.log("该号码不是中国电信");
+            }
+        }
+
+        function prompt1(){
+			var number = prompt("请输入想要查询的号数：",""); //手动输入号码
+            console.log("输入的前三位验证号码：",number);
+			check(number);
+		}	
+
+        prompt1();//调用函数
+
+        
+        console.log("5:String 在基本数据类型 string 的对象表达，它拥有更多的对字符串进行操 作的属性和方法");
+
+        console.log("(1):")
+
+        var qq = "1845459542@qq.com";
+
+        console.log("输入的邮箱为：",qq);
+        var n = qq.substr(0,10); //substr() 方法可在字符串中抽取从 开始 下标开始的指定数目的字符。
+        //提示： substr() 的参数指定的是子串的开始位置和长度，因此它可以替代 substring() 和 slice() 来使用。
+        //在 IE 4 中，参数 start 的值无效。在这个 BUG 中，start 规定的是第 0 个字符的位置。在之后的版本中，此 BUG 已被修正。
+        //ECMAscript 没有对该方法进行标准化，因此反对使用它。
+        //注意： substr() 方法不会改变源字符串。
+
+        console.log("提取的qq号码为：",n);
+
+
+        console.log("6:Math 对象有很多与数学相关的属性和方法，可以直接使用。");
+
+        console.log("(1)"); 
+        console.log(Math.round(Math.random()*3+1)); //Math.round()是四舍五入，Math.random()是生成0--1的随机数（左闭右开）
+
+
+
+        console.log("7:");
+
+
+        var x = 1;
+        function A(y){
+            var x = 2;
+            function B(z){
+                console.log(x+y+z);  
+            }
+            return B; //返回值，形成闭包
+        }
+        var C = A(2); //将地址传给C
+        C(3); //调用
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包练习</title>
+</head>
+<body>
+    <script>
+        function fun(){
+            var num = 0;           
+                function rebFun(){
+                    num++;
+                    console.log("fun函数被调用" + num +"次");
+                }
+            return rebFun;  
+        }
+        var f = fun();
+        f();
+        f();
+        f();
+    </script>
+</body>
+</html>
